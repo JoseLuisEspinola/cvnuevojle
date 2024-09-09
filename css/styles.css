@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #faebd7;
+}
+
+nav {
+    position: fixed;
+    background-color: rgba(59, 59, 59, 1);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    justify-content: space-arround;
+    transition: 0.7s;
+    padding: 16px 10px;
+    height: 100px;
+    width: 100%;
+}
+
+nav.abajo {
+    background-color: rgba(59, 59, 59, 1);
+    padding: 12px 20px;
+}
+
+.enlace {
+    position: absolute;
+    padding: 6px 20px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    /* animation: rotar-logo 4s ease 1s infinite; */
+}
+
+/* **** Animacion del logo **** */
+@keyframes rotar-logo {
+    from {
+        transform: rotateY(360deg);
+    }
+}
+
+.main-name {
+    font-size: 1.6rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: #5dcbec 2.4px 2.4px;
+
+    transition: 0.5s;
+}
+
+.main-name:hover {
+    color: #5dcbec;
+    text-shadow: #ffffff 2.4px 2.4px;
+    transition: 0.5s;
+}
+
+nav ul {
+    float: right;
+    /* margin-right: 10px; */
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0;
+}
+
+nav ul li a {
+    position: relative;
+    color: #51ba97;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 0 12px;
+}
+
+/* nuevo */
+li a:after {
+    content: "";
+    position: absolute;
+    background-color: #ff3c78;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+li a:hover {
+    /* background: rgb(156, 156, 157, 0.6); */
+    transition: 0.5s;
+    color: #ffffff;
+}
+
+li a:hover:after {
+    width: 100%;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/* nav.abajo .main-name, */
+nav.abajo ul li a {
+    color: white;
+}
+
+/* nav.abajo .logo, */
+nav.abajo ul li a:hover {
+    color: #51ba97;
+}
+
+
+/* ***************************************** */ 
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 24px;
+}
+
+h2 {
+    padding: 30px 0 18px;
+    color: blue;
+    text-align: center;
+    font-size: clamp(1.375rem, 3vw + 0.5rem, 2.300rem);
+}
+
+#los-hr-0 {
+    border: 0.1px solid #000000;
+    margin: 0px auto 96px;
+    width: 1%;
+}
+
+#los-hr-1, #los-hr-2, #los-hr-3, #los-hr-4,
+#los-hr-5, #los-hr-6, #los-hr-7, #los-hr-8 {
+    border: 2px solid #b6c7bf;
+    margin: 44px auto 46px;
+    width: 72%;
+}
+
+/* todos los p = parrafos */
+p {
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    margin: 16px 0;
+    text-align: justify;
+}
+
+.subrayado {
+    text-decoration: underline;
+}
+
+.datos-persona {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: justify;
+}
+
+.datos-persona ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.datos-persona ul li {
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.datos-persona img {
+    margin-top: 4px;
+    width: 14.6em; 
+    height: 14.6em;
+    border-radius: 5px;
+}
+
+strong {
+    font-weight: bold;
+    margin-right: 5px;
+}
+  
+.job {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.job h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.descripcion {
+    line-height: 1.6em;
+}
+
+.ano-dos ul li {
+    margin-bottom: 1px;
+}
+
+.ano-uno2 ul li {
+    margin-bottom: 1px;
+}
+
+.ano-uno1 ul li {
+    margin-bottom: 1px;
+}
+
+.ano-dos ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ano-uno2 ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ano-uno1 ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ****** boton imprimir cv ****** */
+/* Estilo adicional para el botón imprimir */
+#imprimir {
+    text-align: center;
+}
+
+#imprimir button {
+    background-color: #47aaa7;
+    border: 1px solid #47aaa7;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#imprimir button:hover {
+    color:#333;
+    background-color: #56ceca;
+    transition: 0.5s;
+}
+
+
+
+/* ****** FOOTER ****** */
+/************************/
+footer {
+    background-color: #3b3b3b;
+}
+
+.footer-container {
+    background-color: #3b3b3b;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* para los 2 h3 */
+footer h3 {
+    font-size: 2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #3b3b3b;
+    padding: 10px 0 10px 0;
+    margin: 0;
+    text-shadow: #2fcdcd 2px 2px;
+    text-align: center;
+}
+
+.footer-ul li {
+    color: #ffffff;
+    padding: 5px 10px;
+    margin: 0;
+    justify-content: center;
+}
+
+.footer-ul a {
+    font-size: 1.1rem;
+    color: yellow;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.footer-ul a:hover {
+    color: #0000ff;
+    background-color: #333;
+    transition: 0.5s ease;
+}
+
+/* ***************** */
+.footer-contacto {
+    text-align: center;
+}
+
+.footer-contacto .mimail {
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer-contacto .mimail:hover {
+    color: #0ef;
+}
+
+.footer-contacto .micelu {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 1.2rem;
+}
+
+/* ******************** */
+.social-links {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.social-links li {
+    color: #ffffff;
+    padding: 5px 10px;
+    margin: 0;
+    justify-content: center;
+}
+
+.social-links a {
+    font-size: 1.1rem;
+    color: #ffffff;
+    transition: 0.5s ease;
+}
+
+.social-links a:hover {
+    color: #0ef;
+    transition: 0.5s ease;
+}
+
+/* ******************* */
+hr.footer-hr {
+    border: 2chsolid#f80303;
+    width: 80%;
+    margin: 12px auto 6px;
+}
+
+footer .copyright {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-stretch: normal;
+    background-color: #3b3b3b;
+    color: #99f78d;
+    text-align: center;
+}
+
+
+/* ******* Footer ****** */
+/* footer {
+    text-align: center;
+    background-color: #3b3b3b;
+    width: 100vw;
+    color: #fff;
+    padding: 10px 0;
+    max-width: 100%;
+}
+
+p.contac {
+    font-size: 2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #3b3b3b;
+    padding: 10px 0 10px 0;
+    margin: 0;
+    text-shadow: #2fcdcd 2px 2px;
+    text-align: center;
+}
+
+p.mimail {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.social-links {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    color: #ffffff;
+    padding: 5px 10px;
+    margin: 0;
+    justify-content: center;
+}
+
+.social-links a {
+    font-size: 1.4rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.social-links a:hover {
+    color: #2fcdcd;
+    background-color: #333;
+    transition: 0.5s;
+}
+
+
+.in-links {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.in-links li {
+    color: #ffffff;
+    padding: 5px 8px;
+    margin: 0;
+    justify-content: center;
+}
+
+.in-links a {
+    font-size: 1rem;
+    color: yellow;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.in-links a:hover {
+    color: #0000ff;
+    background-color: #333;
+    transition: 0.5s ease;
+}
+
+footer .copyright {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    font-stretch: expanded;
+    color: #99f78d;
+    text-align: center;
+} */
+
+
+
+/* Estilos para el header y footer en pantalla grande */
+/* Media Queries para dispositivos móviles */
+@media only screen and (max-width: 1490px) {
+    .enlace {
+        position: absolute;
+        padding: 14px 10px;
+    }
+    
+    .logo {
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+    }
+    
+    .main-name {
+        font-size: 1.4rem;
+        transition: 0.5s;
+    } 
+    
+    nav ul li a {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+
+/* ************** MENU HABURGUESA ************** */
+/*************************************************/
+@media only screen and (max-width: 1490px) {
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 76vh;
+        background: #2c3e50;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        overflow-y: auto;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 46px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    li a:hover, li a.active {
+        background: none;
+        color: #ffffff;
+    }
+
+    #check:checked ~ ul {
+        left:0;
+    }
+}
+
+
+@media only screen and (max-width: 978px) {
+    ul.in-links li a {
+        color: #f56595;
+    }
+}
+
+
+@media only screen and (max-width: 850px) {
+    div.datos-persona {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .datos-persona ul li {
+        font-size: 16px;
+    }
+
+    div img {
+        margin: 0 auto 20px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    nav ul li {
+        margin: 40px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    div img {
+        width: 12em;
+        height: 12em;
+    }
+    
+    #datos-personales, .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    /* de los datos personales */
+    div ul li {
+        font-size: 17px;
+    }
+    
+    .job h3 {
+        font-size: 18px;
+    }
+    
+    p {
+        font-size: 17px;
+    }
+
+
+    /* **** Contacto **** */
+    p.contac {
+        font-size: 1.5rem;
+    }
+
+    /* nuevo */
+    .footer-container h3 {
+        font-size: 1.5rem;
+    }
+
+    /* **** nombre mail **** */
+    p.mimail {
+        font-size: 1rem;
+    }
+
+    /* **** links rededes sociales **** */
+    .social-links li,
+    .in-links li {
+        padding: 5px 5px;
+    }
+
+    .social-links a,
+    .in-links a {
+        font-size: 1rem;
+    }
+
+    /* **** links personales del footer **** */
+    footer div.contenedor-links ul {
+        flex-direction: column;
+    }
+
+    /* **** Copying **** */
+    footer p.copying {
+        font-size: 0.8rem;
+        font-stretch: normal;
+    }
+}
+
+
+
+@media only screen and (max-width: 348px) {
+    a.enlace span {
+        display: none;
+    }
+
+    nav ul li {
+        margin: 30px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    div ul li {
+        font-size: 15px;
+    }
+
+    .job h3 {
+        font-size: 16px;
+    }
+    
+    p {
+        font-size: 15px;
+    }
+
+    /* **** footer **** */
+    .social-links a {
+        font-size: 0.85rem;
+    }
+    
+    footer p.copying {
+        font-size: 0.7rem;
+        font-stretch: normal;
+    }
+}
